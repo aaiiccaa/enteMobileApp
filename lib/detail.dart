@@ -19,7 +19,7 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text("Detail"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -39,19 +39,35 @@ class DetailPage extends StatelessWidget {
             ),
             const SizedBox(height: 8.0),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Icon(Icons.location_on, color: Colors.grey),
-                const SizedBox(width: 4),
-                Text(
-                  location,
-                  style: const TextStyle(fontSize: 18.0, color: Colors.grey),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        const Icon(Icons.location_on, color: Colors.grey),
+                        const SizedBox(width: 4),
+                        Text(
+                          location,
+                          style: const TextStyle(fontSize: 18.0, color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8.0),
+                    Text(
+                      type,
+                      style: const TextStyle(fontSize: 18.0, color: Colors.grey),
+                    ),
+                  ],
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    print("Button pressed");
+                  },
+                  child: const Text('Show Menu'),
                 ),
               ],
-            ),
-            const SizedBox(height: 8.0),
-            Text(
-              type,
-              style: const TextStyle(fontSize: 18.0, color: Colors.grey),
             ),
           ],
         ),
