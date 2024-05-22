@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'ENTe',
       theme: ThemeData(
         primarySwatch: Colors.green,
+        fontFamily: 'Inter'
       ),
       home: const MyHomePage(title: 'ENTe'),
     );
