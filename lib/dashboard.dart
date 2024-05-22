@@ -229,24 +229,16 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                item['title']!,
-                                style: const TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
+                                children:[
                                   Text(
-                                    item['type'] ?? "Type unknown",
+                                    item['title']!,
                                     style: const TextStyle(
-                                      fontSize: 16.0,
-                                      color: Colors.grey,
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
-
                                   Row(
                                     children: [
                                       const Icon(
@@ -262,6 +254,17 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ),
                                       ),
                                     ],
+                                  ),
+                                ]
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    item['type'] ?? "Type unknown",
+                                    style: const TextStyle(
+                                      fontSize: 16.0,
+                                      color: Colors.grey,
+                                    ),
                                   ),
                                 ],
                               ),
