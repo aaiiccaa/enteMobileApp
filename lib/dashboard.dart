@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'ENTe',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.red,
       ),
       home: const MyHomePage(title: 'ENTe'),
     );
@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.green,
+        selectedItemColor: Colors.red,
         unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
       ),
@@ -175,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           selectedType = newValue;
                         });
                       },
-                      items: ['Main Course', 'Beverage']
+                      items: ['Main Course', 'Beverage', 'Snack', 'Dessert']
                           .map<DropdownMenuItem<String>>(
                             (value) => DropdownMenuItem<String>(
                           value: value,
